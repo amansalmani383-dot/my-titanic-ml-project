@@ -2,7 +2,8 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-model = joblib.load("model.pkl")
+import os
+model = joblib.load(os.path.join(os.path.dirname(__file__), "model.pkl"))
 
 st.title("Titanic Survival Predictor")
 st.write("Machine Learning Prediction App")
